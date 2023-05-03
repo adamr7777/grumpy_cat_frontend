@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
-import Ai from './Ai';
+import {ContextObj} from './AiContext';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import MainContent from './MainContent';
 
 
-export default function() {
+export default function App() {
+    const context = useContext(ContextObj);
+    const {message} = context;
+    // console.log(message);
     return (
         <>
-            <Ai/>
+            <Navbar/>
+            <MainContent/>
+            {/* <Cat/> */}
+            <Footer/>
         </> 
     );
 }
