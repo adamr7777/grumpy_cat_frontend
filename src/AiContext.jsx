@@ -8,7 +8,8 @@ export const ContextObj = createContext()
 export function AiContextProv(props) {
 
     const [message, setMessage] = useState({});
-    const [question, setQuestion] = useState('')
+    const [question, setQuestion] = useState('');
+    const [isError, setIsError] = useState(false);
     const {god, shakespeare, scripture, cat} = modes;
 
     function getAi() {
@@ -19,7 +20,7 @@ export function AiContextProv(props) {
         fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
-                Authorization: `Bearer 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`,
+                Authorization: `Bearer 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`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -32,7 +33,8 @@ export function AiContextProv(props) {
             }) 
         })
             .then((response)=> response.json())
-            .then((data)=> setMessage(data.choices[0].message));
+            .then((data)=> setMessage(data.choices[0].message))
+            .catch((error)=> setIsError(true));
     }
 
 
@@ -47,7 +49,7 @@ export function AiContextProv(props) {
     
 
     return(
-        <ContextObj.Provider value={{answer: message.content, askQuestion: setQuestion}}>
+        <ContextObj.Provider value={{answer: message.content, askQuestion: setQuestion, isError: isError}}>
             {props.children}
         </ContextObj.Provider>
     ) 
