@@ -11,6 +11,7 @@ export function AiContextProv(props) {
     const [question, setQuestion] = useState('');
     const [isError, setIsError] = useState(false);
     const {god, shakespeare, scripture, cat} = modes;
+    const apiKey = import.meta.env.VITE_API_KEY;
 
     function getAi() {
         if (question === '') return;
@@ -20,7 +21,7 @@ export function AiContextProv(props) {
         fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
-                Authorization: `Bearer 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`,
+                Authorization: `Bearer ${ApiKey}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
