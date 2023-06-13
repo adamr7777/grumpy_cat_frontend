@@ -10,7 +10,7 @@ export function AiContextProv(props) {
     const [message, setMessage] = useState({});
     const [question, setQuestion] = useState('');
     const [isError, setIsError] = useState(false);
-    const {god, shakespeare, scripture, cat} = modes;
+    const {cat} = modes;
     const apiKey = import.meta.env.VITE_API_KEY;
 
     function getAi() {
@@ -36,7 +36,7 @@ export function AiContextProv(props) {
             .then((response)=> response.json())
             .then((data)=> setMessage(data.choices[0].message))
             .catch((error)=> setIsError(true));
-    }
+    };
 
 
     
@@ -53,5 +53,5 @@ export function AiContextProv(props) {
         <ContextObj.Provider value={{answer: message.content, askQuestion: setQuestion, isError: isError}}>
             {props.children}
         </ContextObj.Provider>
-    ) 
-}
+    );
+};

@@ -14,30 +14,30 @@ export default function MainContent() {
 
     function handleChange(event) {
         setText(event.target.value);
-    }
+    };
 
     function getAnswer() {
         askQuestion(text);
         setText('');
         setPlaceHolder('Grumpy Cat is thinking...')
-    }
+    };
 
 
     
     function clearTextArea() {
         setPlaceHolder('');
         setText('');
-    }
+    };
 
     useEffect(()=> {
         if (answer === '') return;
         setText(answer);
-    }, [answer])
+    }, [answer]);
 
 
     useEffect(()=> {
         if (isError) setPlaceHolder(errorMessage);
-    }, [isError])
+    }, [isError]);
 
 
     
@@ -52,8 +52,8 @@ export default function MainContent() {
                 <button type="button" onClick={getAnswer} className="btn btn-primary">Ask!</button>
            </div>
         </div>
-    )
-}
+    );
+};
 
 
 
@@ -66,31 +66,3 @@ export default function MainContent() {
 
 
 
-
-
-// export default function MainContent() {
-//     const defaultText = 'This the Grumpy Cat. Although she may seem unfriendly, try asking her questions!';
-//     const [text, setText] = useState('');
-//     const {answer, askQuestion} = useContext(ContextObj);
-//     const [personaAnswer, setPersonaAnswer] = useState('start');
-
-//     function handleChange(event) {
-//         setText(event.target.value);
-//     }
-
-//     function getAnswer() {
-//         askQuestion(text);
-//         setText('');
-//         setPersonaAnswer('Grumpy Cat is thinking...')
-//     }
-
-
-    
-//     function clearPlaceH() {
-//         setPersonaAnswer('');
-//     }
-
-//     useEffect(()=> {
-//         // if (answer === '') return;
-//         setPersonaAnswer(answer);
-//     }, [answer])

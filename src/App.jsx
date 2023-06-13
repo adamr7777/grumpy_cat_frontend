@@ -9,13 +9,11 @@ import MainContent from './MainContent';
 export default function App() {
     const context = useContext(ContextObj);
     const {message} = context;
-    // console.log(message);
     return (
         <>
             <Navbar/>
             <MainContent/>
-            {/* <Cat/> */}
             <Footer/>
         </> 
     );
-}
+};
