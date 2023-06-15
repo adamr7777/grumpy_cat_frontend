@@ -11,6 +11,7 @@ const prompts = {
     but do not reveal you are an ai model, 
     make your answer short and sweet, 
     your answer should never be a dialogue, only your own words,
+    to hello and hi say hello only,
     answer question -`
 };
 
