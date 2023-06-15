@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 
-import {AiContextProv} from './AiContext'; 
+import {ContextProv} from './Components/Context'; 
 
 import App from './App';
 
@@ -8,7 +8,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <AiContextProv>
+    <ContextProv>
         <App/>
-    </AiContextProv>
+    </ContextProv>
 );
