@@ -1,9 +1,9 @@
 React | Bootstrap | CSS
 
-AI cat chatbot:
+AI cat chatbot [Full Stack App]:
 
 • the user can hold a back-and-forth realistic conversation with the chatbot
-• utilises GPT-4 technology via POST API call
+• utilises GPT-4 technology via POST API call [on the backend]
 • uses custom prompts that shape the AI to impersonate a grumpy and cheeky cat character
 • React app architecture maintains a smooth and responsive user experience
 
