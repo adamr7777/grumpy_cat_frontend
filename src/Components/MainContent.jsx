@@ -1,6 +1,6 @@
 import React, {useState, useContext, useEffect} from 'react';
 
-import {ContextObj} from './Context';
+import {ContextObj} from '../Context/Context';
 
 
 export default function MainContent() {
