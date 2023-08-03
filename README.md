@@ -1,5 +1,4 @@
-Frontend - React | Bootstrap | CSS 
-Backend - Node | Express 
+Frontend - React | Bootstrap | CSS                 Backend - Node | Express 
 
 AI cat chatbot [Full Stack App]:
 
