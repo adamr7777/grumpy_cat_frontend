@@ -5,7 +5,7 @@ Backend - Node | Express
 
 
 
-AI cat chatbot [Full Stack App]:
+AI cat chatbot [Full Stack App]
 
 • the user can hold a back-and-forth realistic conversation with the chatbot
 • utilises GPT-4 technology via POST API call [on the backend]
